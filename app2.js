@@ -38,3 +38,9 @@ const results = turtleMovements.filter(function(move) {
 
 console.log(results);
 
+const totalStep = results.map( move => {
+    return move[0] + move[1]
+})
+
+console.log(totalStep)
+
