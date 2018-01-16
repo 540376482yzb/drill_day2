@@ -55,3 +55,4 @@ for (let i = 0; i < results.length; i++) {
 }
 
 console.log(totalStepTwo);
+
