@@ -3,12 +3,12 @@
 function hazardWarningCreator(typeOfWarning){
   let warningCounter = 0;
   return function(location){
-    let time = "";
-  if (warningCounter > 0 ) {
-    time = "times"
-  } else {
-    time = "time";
-  }
+    let time = '';
+    if (warningCounter > 0 ) {
+      time = 'times';
+    } else {
+      time = 'time';
+    }
     warningCounter ++;
     console.log(`${typeOfWarning} harzard at ${location}`);
     console.log(`the ${typeOfWarning} have been triggered ${warningCounter} ${time} today`);
@@ -31,16 +31,27 @@ let turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
 
 const results = turtleMovements.filter(function(move) {
-    if (move[0] >= 0 && move[1] >= 0) {
-      return true;
-    }
+  if (move[0] >= 0 && move[1] >= 0) {
+    return true;
+  }
 });
 
 console.log(results);
 
 const totalStep = results.map( move => {
-    return move[0] + move[1]
-})
+  return move[0] + move[1];
+});
 
-console.log(totalStep)
+console.log(totalStep);
 
+const totalStepTwo = [];
+results.forEach(function(move) {
+  totalStepTwo.push(move[0] + move[1]);
+});
+
+
+for (let i = 0; i < results.length; i++) {
+  results[i][0] + results[i][1];
+}
+
+console.log(totalStepTwo);
